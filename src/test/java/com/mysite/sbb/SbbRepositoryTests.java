@@ -164,4 +164,5 @@ class SbbRepositoryTests {
         assertEquals("네 자동으로 생성됩니다.", answerList.getFirst().getContent());
     }
 
+
 }

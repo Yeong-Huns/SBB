@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mysite.sbb.t_board.BoardRepository">
+
+    <select id="getBoardList" resultSets="BoardDTO">
+        select  no, title, re,
+                to_char(regdate, 'YYYY/MM/DD HH24:MI:SS') as regdate
+        from t_board
+        order by no desc
+        offset 0 rows fetch
+            first 10 rows only
+    </select>
+
+</mapper>
